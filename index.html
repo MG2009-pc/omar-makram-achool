@@ -20,6 +20,9 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             margin: 20px;
             width: 55%;
+            opacity: 0; /* الصورة تبدأ غير مرئية */
+            transform: scale(1.8); /* الصورة تبدأ بحجم أصغر */
+            animation: fadeInZoom 1.5s ease-in-out forwards; /* تطبيق الأنيميشن */
         }
 
         /* تحسين تصميم الزر */
@@ -34,6 +37,8 @@
             font-weight: bold;
             color: rgb(255, 51, 0);
             box-shadow: #333;
+            align-items: center;
+            justify-content: center;
         }
 
         button:hover {
@@ -59,18 +64,28 @@
         .container div {
             margin: 10px;
         }
+
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(1.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="3.jpg" alt="School Image">
-        <div>
+       
             <a href="index2.html">
-                <button>
+                <button >
                     <h2>NEXT</h2>
                 </button>
             </a>
-        </div>
-    </div>
+      </div>
 </body>
 </html>
